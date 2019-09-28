@@ -1,0 +1,131 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyANoDLdQrceroodq633tmAc6ZX6MIKjw5Q",
+    authDomain: "finalproject-3546d.firebaseapp.com",
+    databaseURL: "https://finalproject-3546d.firebaseio.com",
+    projectId: "finalproject-3546d",
+    storageBucket: "finalproject-3546d.appspot.com",
+    messagingSenderId: "536719961140",
+    appId: "1:536719961140:web:4926b54f694f74f3"
+  };
+  // Initialize Firebase
+//  firebase.initializeApp(firebaseConfig);
+
+firebase.initializeApp(firebaseConfig);
+  
+  let database1 =firebase.database().ref('device1on')
+
+  let p=0;
+
+  function submitted(){
+    p=p+1;
+      if(p==1){
+   document.querySelector('#linkit').value=(p=p+1);
+   document.querySelector('#result').innerHTML="ON";
+  database1.set(p);
+ console.log(p);
+      }
+          if(p==3){
+   document.querySelector('#linkit').value=(p=p-3);
+   document.querySelector('#result').innerHTML="OFF";
+  database1.set(p);
+ console.log(p);
+
+      }
+    }
+
+
+ 
+    let database2 =firebase.database().ref('device2on')
+
+  let q=1;
+
+  function submitted2(){
+    q=q+1;
+      if(q==2){
+   document.querySelector('#linkit2').value=(q=q+1);
+   document.querySelector('#result2').innerHTML="ON";
+  database2.set(q);
+ console.log(q);
+      }
+          if(q==4){
+   document.querySelector('#linkit2').value=(q=q-3);
+   document.querySelector('#result2').innerHTML="OFF";
+  database2.set(q);
+ console.log(q);
+
+      }
+    }
+
+      let database3 =firebase.database().ref('hariom')
+
+  let w=8;
+
+  function ac(){
+    w=w+1;
+      if(w==9){
+   document.querySelector('#linkit3').value=(w=w+1);
+   document.querySelector('#result3').innerHTML="ON";
+      document.querySelector('#you').innerHTML="25°C";
+  database3.set(w);
+ console.log(w);
+      }
+          if(w==11){
+   document.querySelector('#linkit3').value=(w=w-3);
+   document.querySelector('#result3').innerHTML="OFF";
+   document.querySelector('#you').innerHTML="AC off,room temperture is not being controlled";
+  database3.set(w);
+ console.log(w);
+
+      }
+    }
+    let f=0;
+    function popu(){
+      f=f+1;
+      if(f==1){
+        document.querySelector('#you').innerHTML="26°C";
+        f=f+1;
+      }
+      if(f==3){
+        document.querySelector('#you').innerHTML="26°C";
+        f=f+1;
+      }
+      if(f==5){
+        document.querySelector('#you').innerHTML="27°C";
+        f=f+1;
+      }
+      if(f==7){
+        document.querySelector('#you').innerHTML="28°C";
+        f=f+1;
+      }
+    }
+        let h=0;
+    function popu1(){
+      h=h+1;
+      if(h==1){
+        document.querySelector('#you').innerHTML="24°C";
+        h=h+1;
+      }
+      if(h==3){
+        document.querySelector('#you').innerHTML="23°C";
+        h=h+1;
+      }
+      if(h==5){
+        document.querySelector('#you').innerHTML="22°C";
+        h=h+1;
+      }
+         if(h==7){
+        document.querySelector('#you').innerHTML="21°C";
+        h=h+1;
+      }
+   if(h==9){
+        document.querySelector('#you').innerHTML="20°C";
+        h=h+1;
+      }
+         if(h==11){
+        document.querySelector('#you').innerHTML="19°C";
+        h=h+1;
+      }
+
+
+    }
+
